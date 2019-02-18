@@ -10,7 +10,8 @@ namespace Calculator
     {
         static void Main(string[] args)
         {
-            new Calculations().Divide(2, 0);
+            Console.WriteLine(new Calculations().Add(2, 2));
+            Console.Read();
         }
     }
 }
