@@ -14,12 +14,19 @@ namespace EWsei.Selenium.Tests
         [Test]
         public void GoToLoginPage()
         {
-            //LoginPage loginPage = new LoginPage();
+            //LoginPage loginPage = new LoginPage(driver);
             //var x = loginPage.Login;
             var login = driver.FindElement(By.XPath(".//a[text()='Logowanie']"));
             login.Click();
             var loginpanel = driver.FindElement(By.ClassName("loginpanel"));            
             Assert.IsTrue(loginpanel.Displayed);
+        }
+        [Test]
+        public void GoToLoginPage2()
+        {
+            LoginPage loginPage = new LoginPage(driver);           
+            loginPage.Login.Click();            
+            Assert.IsTrue(loginPage.LoginPanel.Displayed);
         }
         [Test]
         public void LoginWrongPassword()

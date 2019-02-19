@@ -10,7 +10,16 @@ namespace EWsei.Selenium.Tests
 {
     public class LoginPage
     {
-        [FindsBy(How = How.Id, Using = "page")]
+        private IWebDriver driver;
+        public LoginPage(IWebDriver driver)
+        {
+            this.driver = driver;
+            PageFactory.InitElements(driver, this);
+        }
+        [FindsBy(How = How.XPath, Using = ".//a[text()='Logowanie']")]
         public IWebElement Login { get; set; }
+
+        [FindsBy(How = How.ClassName, Using = "loginpanel")]
+        public IWebElement LoginPanel { get; set; }
     }
 }

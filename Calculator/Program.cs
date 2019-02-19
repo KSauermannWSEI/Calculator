@@ -10,7 +10,7 @@ namespace Calculator
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(new Calculations().Add(2, 2));
+            Console.WriteLine(new Calculations(new Repo()).GetFirst());
             Console.Read();
         }
     }
