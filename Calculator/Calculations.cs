@@ -9,7 +9,7 @@ namespace Calculator
 {
     public class Calculations
     {
-        private readonly IRepo repo;
+        private readonly IRepo repo; 
 
         public Calculations(IRepo repo)
         {
